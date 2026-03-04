@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Proyecto integrador - CSS</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Prism CSS (tema oscuro tipo VS Code) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <!-- Prism JS -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-markup.min.js"></script>
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style/dentroSelector.css">
+    <link rel="stylesheet" href="style/hover.css">
+    <link rel="stylesheet" href="style/before.css">
+    <link rel="stylesheet" href="style/animacion.css">
+    <link rel="stylesheet" href="style/mediaQuery.css">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="html.html">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="css.html">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript.html">JavaScript</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="servidor.html">Servidor</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+   <header>
+        <div class="container my-5">
+            <h1 class="display-4">CSS</h1>
+            <p class="lead">Cascading Style Sheets</p>
+        </div>
+   </header>
+   <div class="container my-5">
+      <h2>¿Qué es CSS?</h2>
+      <p>CSS (Cascading Style Sheets) es el lenguaje de estilo utilizado para definir la presentación de documentos HTML. Su conocimiento es fundamental para el desarrollo web, ya que permite controlar el diseño visual de los elementos en una página web, incluyendo colores, fuentes, espaciado y disposición.   </p>
+    </div>
+    <div class="container my-5">
+      <h2>Estructura básica de CSS</h2>
+      <p>La estructura básica de CSS consiste en selectores y declaraciones. Un selector apunta al elemento HTML que se desea estilizar, mientras que las declaraciones definen cómo debe verse ese elemento.</p>
+      <pre><code class="language-css">/* Selector */
+h1 {
+  color: blue;
+  font-size: 24px;
+}</code></pre>
+    </div>
+    <div class="container my-5">
+      <h2>Tipos de selectores en CSS</h2>
+      <ul>
+        <li><span><b>Selector de tipo</b></span>: Selecciona elementos por su nombre de etiqueta (ej. h1, p).</li>
+        <li><span><b>Selector de clase</b></span>: Selecciona elementos con una clase específica (ej. .mi-clase).</li>
+        <li><span><b>Selector de ID</b></span>: Selecciona un elemento con un ID específico (ej. #mi-id).</li>
+      </ul>
+    </div>
+    <div class="container my-5">
+      <h2>Especificidad en CSS</h2>
+      <p>La especificidad en CSS determina qué reglas se aplican cuando hay conflictos entre estilos. Se basa en la cantidad de selectores utilizados, con los ID teniendo mayor especificidad que las clases, y las clases teniendo mayor especificidad que los selectores de tipo.</p>
+    </div>
+    <div class="container my-5">
+      <h2>Herencia en CSS</h2>
+      <p>La herencia en CSS se refiere a la capacidad de los elementos para heredar estilos de sus elementos padres. Por ejemplo, si un elemento padre tiene un color de texto definido, sus elementos hijos también pueden heredar ese color a menos que se especifique lo contrario.</p>
+    </div>
+    <div class="container my-5">
+      <h2>Modelo de caja en CSS</h2>
+      <p>El modelo de caja en CSS describe cómo se representan los elementos en la página web. Cada elemento se considera una caja que consta de cuatro áreas: el contenido, el relleno (padding), el borde (border) y el margen (margin). El modelo de caja es fundamental para entender cómo se distribuyen los elementos y cómo se aplican los estilos.</p>
+      <img src="/imagenes/modeloCaja.webp">
+    </div>
+    <div class="container my-5">
+      <h2>Posicionamiento en CSS</h2>
+      <p>El posicionamiento en CSS se refiere a cómo se colocan los elementos en la página. Existen diferentes tipos de posicionamiento, como el estático (static), relativo (relative), absoluto (absolute) y fijo (fixed). Cada tipo de posicionamiento tiene sus propias reglas y efectos sobre la disposición de los elementos.</p>
+    </div>
+    <div class="container my-5">
+      <h2>Flexbox en CSS</h2>
+      <p>Flexbox es un modelo de diseño en CSS que facilita la creación de diseños flexibles y responsivos. Permite distribuir el espacio entre los elementos de manera eficiente, incluso cuando su tamaño es desconocido o dinámico. Flexbox es especialmente útil para alinear elementos en filas o columnas.</p>
+    </div>
+    <div class="container my-5">
+      <h2>Grid en CSS</h2>
+      <p>CSS Grid es un sistema de diseño bidimensional que permite crear diseños complejos y responsivos. A diferencia de Flexbox, que se centra en la disposición en una sola dimensión (fila o columna), Grid permite organizar los elementos en filas y columnas simultáneamente, proporcionando un control total sobre el diseño de la página.</p>
+    </div>
+    <div class="container my-5">
+      <h2>Propiededes mas usadas de CSS</h2>
+      <ul>
+        <li><span><b>color</b></span>: Define el color del texto.</li>
+        <li><span><b>background-color</b></span>: Define el color de fondo de un elemento.</li>
+        <li><span><b>font-size</b></span>: Define el tamaño de la fuente.</li>
+        <li><span><b>margin</b></span>: Define el margen exterior de un elemento.</li>
+        <li><span><b>padding</b></span>: Define el relleno interior de un elemento.</li>
+      </ul>
+    </div>
+    <div class="container my-5">
+      <h2>Selector dentro de otro selector</h2>
+      <p>En CSS, puedes anidar selectores para aplicar estilos a elementos dentro de otros elementos.</p>
+      <pre><code class="language-css">/* Selector anidado */
+#contendor p {
+  color: red;
+}</code></pre>
+      <div id="contenedor">
+        <p>Este párrafo está dentro del contenedor con ID "contenedor".</p>
+      </div>
+    </div>
+    <div class="container my-5">
+      <h2>pseudo-clase</h2>
+      <p>Los pseudo-clase en CSS se refieren a las interacciones del usuario con los elementos de la página, como el hover (pasar el mouse por encima) o el focus (enfocar un elemento). Estos eventos permiten cambiar el estilo de los elementos en respuesta a las acciones del usuario.</p>
+      <pre><code class="language-css">/* pseudo-clase hover */
+button:hover {
+  background-color: green;
+  color: white;
+}</code></pre>
+      <button>Hover sobre mí</button>
+    </div>
+    <div class="container my-5">
+      <h2></h2>
+    </div>
+    <div class="container my-5">
+      <h2>pseudo-elementos</h2>
+      <p>Los pseudo-elementos en CSS permiten estilizar partes específicas de un elemento, como el primer párrafo o el contenido antes de un elemento. Ejemplos comunes incluyen `::before` y `::after`.</p>
+      <pre><code class="language-css">/* pseudo-elemento before */
+#titulo::before {
+  content: "Título: ";
+  color: blue;
+}</code></pre>
+      <h1 id="titulo">Este es un título</h1>
+    </div>
+    <div class="container my-5">
+      <h2>Animaciones en CSS</h2>
+      <p>Las animaciones en CSS permiten crear efectos visuales dinámicos en los elementos de una página web. Se pueden definir mediante reglas `@keyframes` o utilizando propiedades como `transition` para animaciones simples.</p>
+      <h3>Transiciones CSS</h3>
+      <p>Las transiciones en CSS permiten animar cambios de propiedades de manera suave. Se definen utilizando la propiedad `transition` en el elemento que deseas animar.</p>
+      <pre><code class="language-css">/* Transición CSS */
+#transicion {
+  background-color: blue;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+#transicion:hover {
+  background-color: green;
+}</code></pre>
+      <button id="transicion">Hover sobre mí</button>
+      <h3>Animaciones CSS con @keyframes</h3>
+      <p>Las animaciones CSS con `@keyframes` permiten definir una secuencia de estilos que se aplican a un elemento a lo largo del tiempo. Se pueden controlar la duración, el retraso y la repetición de la animación.</p>
+      <pre><code class="language-css">/* Animación CSS con @keyframes */
+@keyframes ejemploAnimacion {
+  0% {
+    background-color: red;
+    transform: translateX(0);
+  }
+  50% {
+    background-color: yellow;
+    transform: translateX(100px);
+  }
+  100% {
+    background-color: green;
+    transform: translateX(0);
+  }
+}
+#animacion {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation: ejemploAnimacion 4s infinite;
+}</code></pre>
+      <div id="animacion"></div>
+    </div>
+    <div class="container my-5">
+      <h2>Media Queries</h2>
+      <p>Las media queries en CSS permiten aplicar estilos diferentes según las características del dispositivo, como el tamaño de la pantalla o la orientación. Esto es fundamental para crear diseños responsivos.</p>
+      <pre><code class="language-css">/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}</code></pre>
+    </div>
+</body>
+</html>

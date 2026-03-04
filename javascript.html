@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto integrador - JavaScript</title>
+
+        <!-- Prism CSS (tema oscuro tipo VS Code) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <!-- Prism JS -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-markup.min.js"></script>
+
+
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap JS Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="html.html">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="css.html">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript.html">JavaScript</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="servidor.html">Servidor</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header>
+        <div class="container my-5">
+            <h1 class="display-4">JS</h1>
+            <p class="lead">JavaScript</p>
+        </div>
+   </header>
+   <div class="container my-5">
+        <h2>¿Qué es JavaScript?</h2>
+        <p>JavaScript es un lenguaje de programación que se utiliza principalmente para crear contenido interactivo en sitios web. Es un lenguaje de scripting del lado del cliente, lo que significa que se ejecuta en el navegador del usuario. JavaScript permite a los desarrolladores agregar funcionalidades dinámicas a las páginas web, como animaciones, validación de formularios, manipulación del DOM (Document Object Model) y mucho más.</p>
+   </div>
+    <div class="container my-5">
+          <h2>¿Por qué es importante JavaScript?</h2>
+          <p>JavaScript es esencial para el desarrollo web moderno, ya que permite a los desarrolladores crear experiencias de usuario más ricas y dinámicas. Sin JavaScript, las páginas web serían estáticas y no podrían responder a las acciones del usuario. Además, JavaScript es un lenguaje de programación muy popular y ampliamente utilizado, lo que significa que hay una gran cantidad de recursos y comunidades disponibles para aprender y compartir conocimientos.</p>
+    </div>
+    <div class="container my-5">
+          <h2>¿Que es el DOM?</h2>
+          <p>El DOM (Document Object Model) es una representación del contenido de una página web como un árbol de objetos. Permite a JavaScript interactuar con los elementos HTML y CSS de una página web, permitiendo modificar dinámicamente el contenido, la estructura y el estilo de una página web.</p>
+          <h3>maneras de interactuar con el DOM</h3>
+          <ul>
+            <li><strong>getElementById:</strong> Permite seleccionar un elemento por su ID.</li>
+            <li><strong>getElementsByClassName:</strong> Permite seleccionar elementos por su clase.</li>
+            <li><strong>querySelector:</strong> Permite seleccionar el primer elemento que coincida con un selector CSS.</li>
+            <li><strong>querySelectorAll:</strong> Permite seleccionar todos los elementos que coincidan con un selector CSS.</li>
+          </ul>
+          <p>Mas informacion sobre el DOM</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/z1a0eHWn5ds?si=LsNOrZV-27AakPQN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="container my-5">
+          <h2>Eventos en JavaScript</h2>
+          <p>Los eventos son acciones o sucesos que ocurren en el navegador, como hacer clic en un botón, mover el mouse o enviar un formulario. JavaScript permite a los desarrolladores manejar estos eventos para crear interactividad en las páginas web.</p>
+          <h3>Tipos de eventos comunes:</h3>
+          <ul>
+            <li><strong>click:</strong> Ocurre cuando se hace clic en un elemento.</li>
+            <li><strong>mouseover:</strong> Ocurre cuando el mouse se mueve sobre un elemento.</li>
+            <li><strong>submit:</strong> Ocurre cuando se envía un formulario.</li>
+            <li><strong>keydown:</strong> Ocurre cuando se presiona una tecla.</li>
+          </ul>
+    </div>
+    <div class="container my-5">
+          <h2>Integracion de Mapas con JavaScript</h2>
+          <p>JavaScript permite integrar mapas interactivos en páginas web mediante APIs como Google Maps, OpenStreetMap, entre otras. Estas integraciones permiten mostrar ubicaciones geográficas, agregar marcadores, personalizar estilos de mapas y crear experiencias de usuario más ricas.</p>
+          <p>ejemplo de codigo</p>
+          <pre><code class="language-html">&lt;div id="map" style="height: 400px; width: 100%;"&gt;&lt;/div&gt;
+&lt;script&gt;
+  function initMap() {
+    var location = { lat: -34.397, lng: 150.644 };
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 8,
+      center: location
+    });
+    var marker = new google.maps.Marker({
+      position: location,
+      map: map
+    });
+  }
+&lt;/script&gt;
+&lt;script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"&gt;&lt;/script&gt;</code></pre>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.596347344275!2d6.152845973226656!3d46.20331161979346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c65319afc5c3b%3A0xab3c87613c8e7c64!2sEcma%20International!5e0!3m2!1ses-419!2smx!4v1772605151606!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<p>en este caso podemos ver las oficinas de Ecma International </p>
+</div>
+     <div class="container my-5">
+          <h2>Validación de Formularios con JavaScript</h2>
+          <p>JavaScript se utiliza comúnmente para validar formularios en el lado del cliente antes de enviarlos al servidor. Esto permite a los desarrolladores proporcionar retroalimentación inmediata a los usuarios sobre errores en la entrada de datos, como campos obligatorios, formatos incorrectos o valores fuera de rango.</p>
+    </div>
+     <div class="container my-5">
+          <h2>Animaciones con JavaScript</h2>
+          <p>JavaScript permite crear animaciones en páginas web utilizando técnicas como la manipulación del DOM, el uso de CSS y bibliotecas como jQuery o GSAP. Las animaciones pueden mejorar la experiencia del usuario al hacer que las páginas web sean más atractivas y dinámicas.</p>
+      </div>
+</body>
+</html>

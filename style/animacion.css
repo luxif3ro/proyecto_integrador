@@ -1,0 +1,30 @@
+#transicion {
+  background-color: blue;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+#transicion:hover {
+  background-color: green;
+}
+
+/* Animación CSS con @keyframes */
+@keyframes ejemploAnimacion {
+  0% {
+    background-color: red;
+    transform: translateX(0);
+  }
+  50% {
+    background-color: yellow;
+    transform: translateX(100px);
+  }
+  100% {
+    background-color: green;
+    transform: translateX(0);
+  }
+}
+#animacion {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation: ejemploAnimacion 4s infinite;
+}
