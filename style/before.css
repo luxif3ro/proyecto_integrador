@@ -1,5 +1,0 @@
-/* pseudo-elemento before */
-#titulo::before {
-  content: "Título: ";
-  color: blue;
-}

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Integrador - Contenedores</title>
+
+    <link rel="stylesheet" href="/style/main.css" />
+
+    <!-- Prism JS -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-markup.min.js"></script>
+    <!-- Prism CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html"
+              >Inicio</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="WebApis.html">Web APIs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Microservicios.html">Microservicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="webapi.html">Desarrollo de Web APIs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contenedores.html">Contenedores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aplicaciones_nube.html"
+              >Aplicaciones en la nube</a
+            >
+          </li>
+        </ul>
+      </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+
+    <header class="bg-light py-5">
+      <div class="container">
+        <h1 class="display-1 header-title">Contenedores</h1>
+        <p class="lead">
+          En esta sección, exploraremos el concepto de contenedores y su
+          importancia en el desarrollo y despliegue de aplicaciones modernas.
+        </p>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="container">
+          <h2 class="header-title">¿Qué son los contenedores?</h2>
+          <p>
+            Los contenedores son una tecnología de virtualización a nivel de
+            sistema operativo que permite empaquetar una aplicación y sus
+            dependencias en un entorno aislado. Esto facilita la portabilidad y
+            consistencia en diferentes entornos de ejecución. Los contenedores son ligeros y se ejecutan de manera eficiente, lo que los hace ideales para el desarrollo, pruebas y despliegue de aplicaciones. A diferencia de las máquinas virtuales tradicionales, los contenedores comparten el mismo sistema operativo subyacente, lo que reduce significativamente el overhead y mejora el rendimiento. Los contenedores se han convertido en una parte fundamental de la arquitectura de microservicios, ya que permiten a los desarrolladores crear, probar y desplegar servicios de manera rápida y eficiente.
+          </p>
+
+          <h2 class="header-title">Beneficios de los contenedores</h2>
+          <ul>
+            <li>Portabilidad: Los contenedores pueden ejecutarse en cualquier entorno que soporte la tecnología de contenedores.</li>
+            <li>Aislamiento: Cada contenedor se ejecuta de forma aislada, lo que mejora la seguridad y la estabilidad.</li>
+            <li>Escalabilidad: Los contenedores permiten escalar aplicaciones fácilmente al agregar o eliminar instancias según sea necesario.</li>
+            <li>Consistencia: Al empaquetar la aplicación con sus dependencias, se garantiza que se ejecute de la misma manera en diferentes entornos.</li>
+          </ul>
+
+          <h2 class="header-title">Herramientas populares de contenedores</h2>
+          <ul>
+            <li><strong>Docker:</strong> La plataforma de contenedores más popular, que facilita la creación, despliegue y gestión de contenedores.</li>
+            <li><strong>Kubernetes:</strong> Un sistema de orquestación de contenedores que automatiza el despliegue, escalado y gestión de aplicaciones en contenedores.</li>
+            <li><strong>Podman:</strong> Una alternativa a Docker que ofrece una experiencia similar sin requerir un demonio centralizado.</li>
+          </ul>
+        </div>
+        <div class="container p-4 my-4">
+          <div class="row">
+            <div class="col-md-6">
+              <h2 class="header-title mt-4">Ejemplo de uso de Docker</h2>
+              <p>
+                A continuación, se muestra un ejemplo básico de cómo crear un
+                contenedor utilizando Docker para una aplicación Node.js.
+              </p>
+              <pre><code class="language-dockerfile"># Dockerfile
+FROM node:14
+WORKDIR /app
+COPY package.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD ["node", "index.js"]</code></pre>
+            </div>
+            <div class="col-md-6">
+              <h2 class="header-title mt-4">Ejemplo de uso de Kubernetes</h2>
+              <p>
+                A continuación, se muestra un ejemplo básico de cómo desplegar una
+                aplicación en contenedores utilizando Kubernetes.
+              </p>
+              <pre><code class="language-yaml"># deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-app
+        image: my-app:latest
+        ports:
+        - containerPort: 3000</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
